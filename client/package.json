@@ -18,10 +18,9 @@
     "@tailwindcss/vite": "^4.1.18",
     "@tanstack/react-devtools": "latest",
     "@tanstack/react-query": "^5.102.8",
-    "@tanstack/react-router": "latest",
-    "@tanstack/react-router-devtools": "latest",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-router": "^8.3.1",
     "tailwindcss": "^4.1.18",
     "zod": "^4.6.2",
     "zustand": "^5.0.15"
