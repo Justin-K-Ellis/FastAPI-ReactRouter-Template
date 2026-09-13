@@ -1,19 +1,18 @@
-import { createRouter as createTanStackRouter } from '@tanstack/react-router'
-import { routeTree } from './routeTree.gen'
+import { createBrowserRouter } from "react-router";
+import RootLayout from "./layouts/RootLayout";
+import App from "./App";
 
-export function getRouter() {
-  const router = createTanStackRouter({
-    routeTree,
-    scrollRestoration: true,
-    defaultPreload: 'intent',
-    defaultPreloadStaleTime: 0,
-  })
+const router = createBrowserRouter([
+  {
+    Component: RootLayout,
+    children: [
+      {
+        index: true,
+        path: "/",
+        element: <App />,
+      },
+    ],
+  },
+]);
 
-  return router
-}
-
-declare module '@tanstack/react-router' {
-  interface Register {
-    router: ReturnType<typeof getRouter>
-  }
-}
+export default router;
